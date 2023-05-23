@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .headSects {
+    @apply px-[45px] sm:px-[85px] pt-[150px] pb-[70px];
+  }
+
+  .gapSects {
+    @apply px-[45px] sm:px-[80px] py-[70px];
+  }
+
+  .yelBut {
+    @apply py-[18px] px-[24px] text-bluBlack w-full bg-mainYellow rounded-[15px] font-poppins font-[500] text-[14px] gs:w-fit gs:text-[16px] hover:bg-mainBlue hover:text-mainWhite text-center transition-all;
+  }
+
+  .outBut {
+    @apply py-[18px] px-[24px] text-bluBlack w-full rounded-[15px] font-poppins font-[500] border border-bluBlack text-[14px] gs:w-fit gs:text-[16px] hover:bg-mainBlue hover:text-mainWhite hover:border-mainWhite text-center transition-all;
+  }
+
+  .blaBut {
+    @apply py-[18px] px-[24px] text-mainWhite w-full bg-mainBlack rounded-[15px] font-poppins font-[500] text-[14px] gs:w-full gs:text-[16px] hover:bg-mainBlue hover:text-mainWhite text-center transition-all;
+  }
+
+  .darBut {
+    @apply py-[18px] px-[24px] text-mainWhite w-fit bg-mainBlack rounded-[15px] font-poppins font-[500] text-[14px] gs:text-[16px] hover:bg-mainBlue hover:text-mainWhite text-center cursor-pointer transition-all;
+  }
+
+  /* Navbar */
+  .navbar {
+    @apply fixed top-0 left-0 w-full transition-all z-[100];
+  }
+  .navWrapper {
+    @apply flex w-full h-[85px] items-center px-[35px] sm:px-[60px] justify-between bg-mainWhite;
+  }
+  .navShad {
+    @apply drop-shadow-[0_10px_10px_rgba(0,0,0,0.08)] transition-all;
+  }
+  .navLeft {
+    @apply flex items-center space-x-[11px];
+  }
+  .navName {
+    @apply font-poppins font-[600] text-[15px] text-supBlack;
+  }
+  .navLogo {
+    @apply relative w-[45px] h-[45px];
+  }
+  .navRight {
+    @apply font-[500];
+  }
+  .navOn {
+    @apply right-0;
+  }
+  .navOff {
+    @apply right-[-100%];
+  }
+  .navLinks {
+    @apply flex flex-col absolute top-0 w-full h-screen lg:static lg:h-fit bg-mainWhite lg:flex-row lg:space-x-[20px]  lg:w-fit lg:items-center transition-all;
+  }
+  .navItem {
+    @apply font-dmsans text-supGrey text-[15px] cursor-pointer lg:rounded-[5px] hover:underline hover:underline-offset-2 transition-all py-[12px] px-[18px] border-b lg:border-0;
+  }
+  .navActive {
+    @apply bg-mainBlue text-mainWhite;
+  }
+  .threeBars {
+    @apply text-[25px] lg:hidden;
+  }
+  .headLink {
+    @apply flex justify-between text-[25px] px-[15px] py-[15px] lg:hidden;
+  }
+  .headLinkLogo {
+    @apply flex space-x-3 items-center font-poppins text-[15px] font-[600] text-supBlack;
+  }
+  .linkLogo {
+    @apply relative w-[50px] h-[50px];
+  }
+  .botLink {
+    @apply mt-[30px] text-center font-dmsans text-[12px] text-supBlack lg:hidden;
+  }
+  /* End Navbar */
+
+  /* Footer */
+  .footer {
+    @apply bg-mainBlack px-[45px] sm:px-[110px] py-[70px];
+  }
+  .footerWrapper {
+    @apply grid grid-rows-1 grid-cols-12 gap-y-7 xg:gap-y-0;
+  }
+  .fooBox {
+    @apply col-span-12 xg:col-span-4;
+  }
+  .fooLong {
+    @apply col-span-12 xg:col-span-8 flex flex-col space-y-7 gs:space-y-0 gs:flex-row gs:justify-between;
+  }
+  .fooLogo {
+    @apply flex items-center text-baseWhite font-poppins text-[13px] font-[500] space-x-3;
+  }
+  .fooWas {
+    @apply w-[45px] h-[45px] relative;
+  }
+  .fooAdd {
+    @apply mt-[20px] w-[270px] font-dmsans text-baseWhite text-[13px];
+  }
+  .fooNum {
+    @apply mt-[20px] w-fit flex flex-col space-y-[12px] font-dmsans text-baseWhite text-[13px];
+  }
+  .fooHov {
+    @apply cursor-pointer w-fit hover:underline hover:underline-offset-2 transition-all;
+  }
+  .fooBoxLinks {
+    @apply font-dmsans flex flex-col w-fit space-y-[20px];
+  }
+  .fooTitle {
+    @apply text-[17px] text-baseWhite capitalize;
+  }
+  .fooLinks {
+    @apply text-[15px] text-baseWhite flex flex-col space-y-[15px] capitalize;
+  }
+  .fooIco {
+    @apply flex space-x-2 items-center border-b border-mainBlack hover:border-b hover:border-baseWhite;
+  }
+  .fooBot {
+    @apply mt-[80px] flex flex-col-reverse  lg:flex-row lg:justify-between capitalize;
+  }
+  .fooCop {
+    @apply font-dmsans text-mainWhite/50 text-[14px] mt-5 lg:mt-0;
+  }
+  .fooTerms {
+    @apply flex space-x-5 text-mainWhite text-[14px] font-dmsans;
+  }
+  /* End Footer */
+
+  /* Header Home */
+  .headerHome {
+    @apply pt-[85px] bg-mainWhite;
+  }
+  .heHome {
+    @apply grid grid-rows-1 grid-cols-12 px-[45px] sm:px-[80px] pb-[70px];
+  }
+  .heCont {
+    @apply col-span-12 xsg:col-span-5 pt-[50px];
+  }
+  .heTitle {
+    @apply font-cabin font-[600] text-mainBlack text-[35px] xs:text-[42px] gs:text-[57px] leading-snug;
+  }
+  .heDesc {
+    @apply font-poppins text-supGrey text-[13px] gs:text-[15px] mt-[20px] leading-[25px] gs:leading-[30px];
+  }
+  .heBut {
+    @apply mt-[30px] flex flex-col w-full xs:flex-row items-center space-y-5 xs:space-x-[20px] xs:space-y-0;
+  }
+  .heCamp {
+    @apply mt-[30px] flex justify-between h-[55px] space-x-5;
+  }
+  .heCampBox {
+    @apply w-[80px] h-[65px] relative;
+  }
+  .heVect {
+    @apply col-span-7 flex items-end justify-center;
+  }
+  .heVectRel {
+    @apply relative w-[90%] h-full;
+  }
+  /* End Header Home */
+
+  /* Stats Homepage */
+  .statsHome {
+    @apply px-[45px] sm:px-[55px] lm:px-[80px] py-[50px] bg-mainBlue flex justify-center;
+  }
+  .statsHomeWrapper {
+    @apply flex flex-col space-y-6 ms:space-y-0 ms:flex-row ms:space-x-6 lm:space-x-12;
+  }
+  .statsItem {
+    @apply text-center text-mainWhite font-poppins;
+  }
+  .statsNum {
+    @apply font-[600] text-[40px] ms:text-[30px] sm:text-[40px] zg:text-[50px];
+  }
+  .statsDesc {
+    @apply font-[500] capitalize text-[14px] ms:text-[10px] sm:text-[12px] gm:text-[15px] zg:text-[20px];
+  }
+  .statsCenter {
+    @apply border-y-2 py-6 ms:border-y-0 ms:border-x-2 border-mainWhite ms:py-0 ms:px-6 lm:px-12;
+  }
+  /* End Stats Homepage */
+
+  /* Pendaftaran */
+  .pendaftaran {
+    @apply bg-mainYellow px-[0px] sm:px-[80px] overflow-x-hidden;
+  }
+  .daftWrapper {
+    @apply grid grid-rows-1 grid-cols-12;
+  }
+  .daftCont {
+    @apply col-span-12 px-[45px] py-[35px] sm:px-0 gm:col-span-6 ms:py-[70px];
+  }
+  .daftImg {
+    @apply col-span-12 gm:col-span-6;
+  }
+  .daftTitle {
+    @apply font-cabin text-bluBlack text-[45px] xs:text-[50px] font-[600] leading-tight capitalize;
+  }
+  .daftDesc {
+    @apply w-full sm:w-[75%] font-poppins font-[300] text-[15px] text-bluBlack mt-[30px];
+  }
+  .daftBut {
+    @apply flex w-full gm:w-[75%];
+  }
+  .daftImg {
+    @apply relative w-full h-[400px] gm:mx-[0px] gm:w-full gm:h-full;
+  }
+  .daftBg {
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full;
+  }
+  /* End Pendaftaran */
+
+  /* Welcome Wrapper */
+  .welcomeHome {
+    @apply gapSects bg-mainWhite;
+  }
+  .comeWrapper {
+    @apply grid grid-rows-1 grid-cols-12;
+  }
+  .comeCont {
+    @apply col-span-12 gm:col-span-6 ms:py-[40px];
+  }
+  .comeImg {
+    @apply col-span-12 gm:col-span-6;
+  }
+  .comeTitle {
+    @apply font-poppins font-[600] text-[30px] xs:text-[35px] ms:text-[40px] zg:text-[48px] text-bluBlack leading-tight;
+  }
+  .comeDesc {
+    @apply mt-[30px] font-poppins text-[14px] ms:text-[16px] font-[300] capitalize leading-relaxed text-bluBlack w-full gm:w-[75%];
+  }
+  /* End Welcome Wrapper */
+
+  /* About Home */
+  .aboutHome {
+    @apply gapSects bg-mainWhite;
+  }
+  .aboWrapper {
+    @apply grid grid-rows-1 grid-cols-12 gap-x-4;
+  }
+  .aboCont {
+    @apply col-span-12 lm:col-span-8;
+  }
+  .aboLogo {
+    @apply hidden lm:block lm:col-span-4;
+  }
+  .aboTitle {
+    @apply font-poppins font-[600] text-[40px] ms:text-[50px] text-bluBlack;
+  }
+  .aboDesc {
+    @apply mt-[21px] font-poppins font-[400] text-[14px] zg:text-[15px] text-bluBlack leading-relaxed;
+  }
+  .aboBut {
+    @apply mt-[30px];
+  }
+  /* End About Home */
+
+  /* Penerimaan */
+  .penerimaan {
+    @apply pb-[70px] bg-mainPurple;
+  }
+  .penTitle {
+    @apply px-[40px] pb-[40px] sm:px-[80px] pt-[70px] sm:pb-[70px] capitalize font-poppins font-[500] text-[22px] gs:text-[35px] lg:text-[45px] text-mainWhite;
+  }
+  .penWrapper {
+    @apply grid grid-rows-1 grid-cols-8 ms:grid-cols-12 gap-y-6 ms:gap-8 px-[25px] sm:px-0;
+  }
+  .penLeft {
+    @apply rounded-l-[15px] rounded-r-[15px] sm:rounded-l-[0px] sm:rounded-r-[25px];
+  }
+  .penRight {
+    @apply rounded-l-[15px] rounded-r-[15px] sm:rounded-r-[0px] sm:rounded-l-[25px];
+  }
+  .penBox {
+    @apply col-span-8 ms:col-span-12 sm:col-span-6 p-[50px] lm:p-[60px] lg:p-[80px] xg:p-[100px] bg-mainYellow;
+  }
+  .penImg {
+    @apply w-[35px] h-[35px] lg:w-[45px] lg:h-[45px] relative;
+  }
+  .penDate {
+    @apply mt-[25px] font-poppins font-[600] text-mainWhite text-[16px] xg:text-[20px];
+  }
+  .penTibox {
+    @apply mt-[25px] font-poppins font-[600] text-bluBlack text-[20px] lm:text-[25px] lg:text-[30px] xg:text-[40px];
+  }
+  .penDebox {
+    @apply mt-[25px] font-poppins font-[400] text-mainWhite text-[14px] lm:text-[15px] lg:text-[20px] xg:text-[25px];
+  }
+  .penDobut {
+    @apply mt-[20px] flex items-center space-x-3 text-bluBlack w-fit border-b border-bluBlack font-[600] text-[14px] lg:text-[16px] hover:text-mainWhite hover:border-mainWhite transition-all;
+  }
+  /* End Penerimaan */
+
+  /* Program */
+  .program {
+    @apply gapSects bg-mainWhite;
+  }
+  .programTitle {
+    @apply font-cabin font-[600] text-[35px] xs:text-[40px] sm:text-[50px] text-bluBlack text-center;
+  }
+  .proTop {
+    @apply mt-[50px] flex flex-col justify-center items-center gs:flex-row gs:justify-between lm:justify-around space-y-5 gs:space-y-0;
+  }
+  .proBox {
+    @apply py-[10px] px-[20px] zg:py-[10px] zg:px-[20px] xg:py-[20px] xg:px-[30px] w-full zs:w-[75%] gs:w-fit flex items-center space-x-[20px] gs:space-x-[10px] mm:space-x-[20px] rounded-[15px] lm:rounded-[20px] border-2 border-[#EAE8E8] justify-center;
+  }
+  .proIcoWrap {
+    @apply bg-[#FEF5C5] rounded-[15px] p-[10px] zg:p-[15px] w-fit;
+  }
+  .proGap {
+    @apply p-[10px] zg:p-[15px] bg-[#FFDF6E] rounded-[15px];
+  }
+  .proIco {
+    @apply relative w-[25px] h-[25px] gs:w-[15px] gs:h-[15px] lm:w-[20px] lm:h-[20px] zg:w-[25px] zg:h-[25px];
+  }
+  .proText {
+    @apply font-cabin font-[600] text-[40px] zs:text-[45px] gs:text-[20px] lm:text-[30px] mm:text-[40px] zg:text-[45px] xg:text-[55px] text-supGrey uppercase;
+  }
+  .programSub {
+    @apply text-center font-cabin text-[20px] ms:text-[30px] font-[600] text-supGrey my-[50px];
+  }
+  .proBot {
+    @apply flex flex-col space-y-12 lg:flex-row lg:space-y-0 justify-between;
+  }
+  .proCube {
+    @apply p-[20px] w-fit border-2 border-[#EAE8E8] rounded-[20px] flex items-center flex-col;
+  }
+  .cubeText {
+    @apply mt-[10px] font-cabin font-[600] text-[20px] zs:text-[25px] text-supGrey capitalize;
+  }
+  .proSpread {
+    @apply flex flex-col space-y-12 xs:flex-row xs:space-y-0 items-center justify-around w-full;
+  }
+  /* End Program */
+
+  /* Fasilitas */
+  .fasilitas {
+    @apply xs:px-[45px] sm:px-[80px] py-[70px] bg-mainWhite;
+  }
+  .fasFloatWrapper {
+    @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-sm w-full h-full z-[150] transition-all;
+  }
+  .fasHidden {
+    @apply hidden scale-50 transition-all;
+  }
+  .fasCenter {
+    @apply flex flex-col w-full h-full justify-center items-center;
+  }
+  .faimTitle {
+    @apply font-poppins font-[600] text-bluBlack text-[22px] pt-[20px] pb-[0px] px-[20px] w-[80%] flex justify-between items-center bg-mainWhite rounded-t-[15px];
+  }
+  .faimBox {
+    @apply relative w-[80%] h-[80%] bg-mainWhite p-5 rounded-b-[15px];
+  }
+  .faimPict {
+    @apply relative w-full h-full;
+  }
+  .fasPush {
+    @apply flex flex-col items-center;
+  }
+  .fasCont {
+    @apply col-span-12 px-[45px] py-[35px] sm:px-0 sm:pl-[45px] gm:col-span-6 ms:py-[70px];
+  }
+  .fasTitle {
+    @apply text-[35px] ms:text-[50px] gm:text-[35px] xg:text-[50px] text-mainWhite;
+  }
+  .fasColWrap {
+    @apply mt-[80px] grid grid-rows-1 grid-cols-8 ms:grid-cols-12 gap-10;
+  }
+  .fasBox {
+    @apply col-span-8 ms:col-span-12 sm:col-span-6 lm:col-span-4 px-6 xs:px-0 text-center font-poppins flex flex-col items-center h-full justify-between;
+  }
+  .faboxTitle {
+    @apply mt-[20px] font-[600] text-bluBlack text-[18px] mm:text-[20px] capitalize;
+  }
+  .faboxDesc {
+    @apply my-[15px] font-[400] text-supGrey text-[14px] mm:text-[15px] capitalize;
+  }
+  .faboxBut {
+    @apply font-[500] text-mainBlue text-[13px];
+  }
+  .faboxHov {
+    @apply hover:underline hover:underline-offset-2 transition-all;
+  }
+  .fapicWrap {
+    @apply bg-[#E8EAFF] p-[20px] rounded-[20px] w-fit;
+  }
+  .fapicCircle {
+    @apply bg-[#6E86FF] rounded-full w-fit p-[15px];
+  }
+  .fapicIco {
+    @apply relative w-[25px] h-[25px];
+  }
+  .fasLast {
+    @apply sm:col-start-7 lm:col-start-5;
+  }
+  /* End Fasilitas */
+
+  /* Kuota */
+  .kuota {
+    @apply xs:px-[45px] sm:px-[80px] py-[70px] bg-mainWhite;
+  }
+  .kuBox {
+    @apply col-span-8 ms:col-span-12 sm:col-span-6 jg:col-span-4 px-6 xs:px-0 text-center font-poppins flex flex-col items-center h-full justify-between;
+  }
+  .kupPush {
+    @apply flex flex-col w-full items-center px-5;
+  }
+  .kuoTitle {
+    @apply text-[35px] ms:text-[50px] gm:text-[35px] xg:text-[50px] text-bluBlack;
+  }
+  .kupicWrap {
+    @apply bg-[#FEF5C5] p-[20px] rounded-full w-fit;
+  }
+  .kupicCircle {
+    @apply bg-[#FFDF6E] rounded-full w-fit p-[15px];
+  }
+  .kupicIco {
+    @apply relative w-[25px] h-[25px];
+  }
+  .kuboxTitle {
+    @apply mt-[20px] font-[600] text-bluBlack text-[16px] sm:text-[12px] zg:text-[14px] xsg:text-[18px] capitalize;
+  }
+  .kuboxGraph {
+    @apply my-[20px] w-full h-[10px] bg-[#FEF5C5] rounded-full;
+  }
+  .kuboFill {
+    @apply bg-[#FFDF6E] h-full rounded-full;
+  }
+  .kuboxDate {
+    @apply text-center text-mainYellow font-poppins font-[600] text-[13px];
+  }
+  .kuLast {
+    @apply sm:col-start-4 jg:col-start-5;
+  }
+  /* End Kuota */
+
+  /* Testimoni */
+  .testimoni {
+    @apply gapSects bg-mainWhite;
+  }
+  .testiTitle {
+    @apply font-cabin text-[35px] sm:text-[50px] text-bluBlack font-[700] text-center;
+  }
+  .sliderTesti {
+    @apply mt-[50px];
+  }
+  .miniCard {
+    @apply px-[40px] pt-[40px] bg-white max-w-full h-[300px] rounded-[20px] mb-[50px] shadow-lg;
+  }
+  .miniHead {
+    @apply flex items-center space-x-[30px];
+  }
+  .miniImg {
+    @apply relative w-[70px] h-[70px];
+  }
+  .miniProfile {
+    @apply font-cabin text-left capitalize;
+  }
+  .miniName {
+    @apply text-[16px] ds:text-[20px] text-bluBlack font-[600];
+  }
+  .miniJob {
+    @apply text-[13px] ds:text-[14px] text-bluBlack/50 font-[400];
+  }
+  .miniBody {
+    @apply mt-[25px] text-left font-cabin text-[15px] ds:text-[16px] text-bluBlack;
+  }
+  .imgFace {
+    @apply rounded-full;
+  }
+  /* End Testimoni */
+
+  /* Artikel */
+  .artikel {
+    @apply gapSects bg-mainWhite;
+  }
+  .artBox {
+    @apply border-t py-[50px];
+  }
+  .artGrid {
+    @apply grid grid-rows-1 grid-cols-12 gap-y-5 lm:gap-y-0 lm:gap-x-5;
+  }
+  .artCont {
+    @apply row-start-2 lm:row-start-1 col-span-12 lm:col-span-7 mm:col-span-8 flex items-center;
+  }
+  .artPict {
+    @apply row-start-1 col-span-12 lm:col-span-5 mm:col-span-4 flex items-center;
+  }
+  .artDate {
+    @apply font-poppins text-[15px] ms:text-[18px] font-[500] text-[#949396];
+  }
+  .artTitle {
+    @apply mt-[25px] font-cabin font-[600] text-bluBlack text-[30px] ms:text-[40px] gm:text-[50px] leading-tight capitalize;
+  }
+  .artBut {
+    @apply mt-[20px] flex items-center space-x-3 text-bluBlack w-fit border-b border-bluBlack font-[600] text-[14px] lg:text-[16px] hover:text-mainBlue hover:border-mainBlue transition-all;
+  }
+  .artRatio {
+    @apply relative w-full h-full aspect-w-2 aspect-h-1;
+  }
+  /* End Artikel */
+
+  /* Hubungi */
+  .hubungi {
+    @apply bg-mainYellow px-[45px] sm:px-[80px] overflow-x-hidden;
+  }
+  .hubCont {
+    @apply col-span-12 py-[35px] gm:col-span-6 ms:py-[70px];
+  }
+  /* End Hubungi */
+}
